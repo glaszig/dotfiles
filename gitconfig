@@ -1,0 +1,44 @@
+[user]
+        name = glaszig
+        email = glaszig@gmail.com
+[color]
+    diff = auto
+    status = auto
+    branch = auto
+[color "branch"]
+    current = yellow reverse
+    local = yellow
+[color "diff"]
+    meta = yellow
+    frag = magenta bold
+    old = red bold
+    new = green bold
+[color "status"]
+    added = yellow
+    changed = green
+    untracked = cyan
+[status]
+    relativePaths = false
+[core]
+    excludesfile = ~/.gitignore
+    pager = less -FRSX
+        quotepath = false
+[alias]
+    b = branch
+    co = checkout
+    d = diff
+    dc = diff --cached
+    lc = log ORIG_HEAD.. --stat --no-merges
+    gl = log --decorate --stat --graph --pretty=format:'%C(yellow)%h%Creset (%ar - %Cred%an%Creset), %s%n'
+    lm = log --pretty=format:'%s'
+    tl = "!for c in $(git for-each-ref refs/tags/ --format='%(refname)'); do echo $c; git show -s --format=\"format:%h - %cn, %ce%n%cd\" \"$c^{commit}\"; echo; done"
+    st = status -sb 
+    serve = !git daemon --reuseaddr --verbose --base-path=. --export-all ./.git
+    prune-all = !git remote | xargs -n 1 git remote prune
+    whatis = show -s --pretty='tformat:%h (%s, %ad)' --date=short
+    whois = "!sh -c 'git log -i -1 --pretty=\"format:%an <%ae>\n\" --author=\"$1\"' -"
+    unmerged = branch --no-merge
+[merge]
+        tool = opendiff
+[mergetool]
+	keepBackup = true
