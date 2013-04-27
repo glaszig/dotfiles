@@ -7,6 +7,11 @@ my.cnf /etc/my.cnf
 gitignore $HOME/.gitignore
 gitconfig $HOME/.gitconfig
 .zshrc
+.vim
+.vimrc
+.tm_properties
+.gemrc
+.irbrc
 "
 
 IFS_BAK=$IFS
