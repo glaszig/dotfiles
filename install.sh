@@ -15,15 +15,25 @@ IFS="
 
 for file in $INSTALL_LINKS; do
     if [[ "$file" != "" ]]; then
-    		# one $file contains source and target
-    		src=$(echo $file | awk '{print $1}')
-    		tgt=$(echo $file | awk '{print $2}')
-    		# if no target was found, use home directory
-    		if [[ "$tgt" == "" ]]; then
-    				tgt="$HOME/$src"
-    		fi
-    		cmd="ln -sn $HOME/.dotfiles/$src $tgt"
-    		eval $cmd && echo "Linked $src to $tgt"
+
+        # one $file contains source and target
+        src=$(echo $file | awk '{print $1}')
+        tgt=$(echo $file | awk '{print $2}')
+
+        # if no target was found, use home directory
+        if [[ "$tgt" == "" ]]; then
+            tgt="$HOME/$src"
+        fi
+
+        # skipping existing files/dirs
+        if [[ -e "$tgt" ]]; then
+            echo "$tgt exists. skipped."
+            continue
+        fi
+
+        cmd="ln -sn $HOME/.dotfiles/$src $tgt"
+        eval $cmd && echo "Linked $src to $tgt"
+
     fi
 done
 
