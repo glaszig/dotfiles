@@ -19,6 +19,7 @@ unless defined? ETC_IRBRC_LOADED
   
   # Use the simple prompt if possible.
   #IRB.conf[:PROMPT_MODE] = :SIMPLE if IRB.conf[:PROMPT_MODE] == :DEFAULT
+  IRB.conf[:HISTORY_FILE] = "#{ENV['HOME']}/.irb_history"
   IRB.conf[:SAVE_HISTORY] = 1000
   IRB.conf[:EVAL_HISTORY] = 200
 
