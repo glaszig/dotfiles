@@ -43,3 +43,5 @@
         tool = opendiff
 [mergetool]
 	keepBackup = true
+[github]
+	user = glaszig
