@@ -47,4 +47,6 @@ source $ZSH/oh-my-zsh.sh
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
 # Customize to your needs...
-export PATH=./.binstubs:$HOME/bin:$PATH
+fpath=(/usr/local/share/zsh-completions $fpath)
+
+export PATH=./.binstubs:.bundle/bin:$HOME/bin:$PATH
