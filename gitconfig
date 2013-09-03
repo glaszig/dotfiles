@@ -22,7 +22,7 @@
 [core]
     excludesfile = ~/.gitignore
     pager = less -FRSX
-        quotepath = false
+	quotepath = false
 [alias]
     b = branch
     co = checkout
