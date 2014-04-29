@@ -41,12 +41,13 @@ COMPLETION_WAITING_DOTS="true"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git brew gem rails sublime)
-
-source $ZSH/oh-my-zsh.sh
-if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
+plugins=(git brew gem rails npm sublime)
 
 # Customize to your needs...
 fpath=(/usr/local/share/zsh-completions $fpath)
 
+export PATH=/usr/local/bin:$PATH
 export PATH=./.binstubs:.bundle/bin:$HOME/bin:$PATH
+source $ZSH/oh-my-zsh.sh
+if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
+
