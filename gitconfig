@@ -45,3 +45,5 @@
 	keepBackup = true
 [github]
 	user = glaszig
+[push]
+	default = simple
