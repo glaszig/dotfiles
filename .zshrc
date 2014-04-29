@@ -28,6 +28,8 @@ DISABLE_AUTO_UPDATE="true"
 # export UPDATE_ZSH_DAYS=13
 export BUNDLER_EDITOR=subl
 export EDITOR=vim
+export LANG="de_DE.UTF-8"
+export LC_ALL="de_DE.UTF-8"
 
 # Uncomment following line if you want to disable colors in ls
 # DISABLE_LS_COLORS="true"
