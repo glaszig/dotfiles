@@ -26,7 +26,7 @@ DISABLE_AUTO_UPDATE="true"
 
 # Uncomment to change how many often would you like to wait before auto-updates occur? (in days)
 # export UPDATE_ZSH_DAYS=13
-export BUNDLER_EDITOR=subl
+export BUNDLER_EDITOR=sublime
 export EDITOR=vim
 export LANG="de_DE.UTF-8"
 export LC_ALL="de_DE.UTF-8"
